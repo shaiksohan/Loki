@@ -39,10 +39,9 @@ h1 {
     flex: 1;
     padding: 8px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid #a7a0a0;
     border-radius: 4px;
 }
-
 /* Add button */
 .input-section button {
     padding: 8px 14px;
@@ -71,7 +70,7 @@ h1 {
     align-items: center;
     padding: 8px;
     margin-bottom: 8px;
-    background-color: #f1f1f1;
+    background-color: #a08d8d;
     border-radius: 4px;
 }
 
@@ -107,7 +106,7 @@ h1 {
     margin-top: 15px;
     width: 100%;
     padding: 8px;
-    background-color: #6c757d;
+    background-color: #6e7b85;
     color: white;
     border: none;
     border-radius: 4px;
@@ -115,5 +114,11 @@ h1 {
 }
 
 .clear-btn:hover {
-    background-color: #5a6268;
+    background-color: #d41c1c;
+}
+.task-time{
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+    
 }
