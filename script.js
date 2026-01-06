@@ -11,26 +11,30 @@ window.onload = function () {
 
 /* Add task */
 function addTask() {
-    if (input.value === "") {
-        alert("Please enter a task");
+    if (input.value === "" || timeInput.value ==="") {
+        alert("Please enter a task and time");
         return;
     }
 
     let li = document.createElement("li");
     let span = document.createElement("span");
     let btn = document.createElement("button");
-    
+    let time =document.createElement("span");
 
     span.innerText = input.value;
-    btn.innerText = "Delete";
+    time.innerText=timeInput.value;
+    time.className="task-time";
 
+    btn.innerText = "Delete";
     btn.setAttribute("onclick", "deleteTask(this)");
 
     li.appendChild(span);
+    li.append(time);
     li.appendChild(btn);
     list.appendChild(li);
 
     input.value = "";
+    timeInput.value="";
     saveTasks();
 }
 
@@ -40,12 +44,12 @@ function deleteTask(btn) {
     saveTasks();
 }
 
+/* DELETE ALL */
+function deleteAllTasks(){
+    list.innerHTML="";
+    localStorage.removeItem("tasks");
+}
 /* Save tasks */
 function saveTasks() {
     localStorage.setItem("tasks", list.innerHTML);
-}
-let delete_all =document.createElement("button"); 
-function deleteAllTasks(){
-    delete_all.parentElement.remove();
-    saveTasks();
 }
