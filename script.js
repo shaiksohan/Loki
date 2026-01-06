@@ -19,6 +19,7 @@ function addTask() {
     let li = document.createElement("li");
     let span = document.createElement("span");
     let btn = document.createElement("button");
+    
 
     span.innerText = input.value;
     btn.innerText = "Delete";
@@ -42,4 +43,9 @@ function deleteTask(btn) {
 /* Save tasks */
 function saveTasks() {
     localStorage.setItem("tasks", list.innerHTML);
+}
+let delete_all =document.createElement("button"); 
+function deleteAllTasks(){
+    delete_all.parentElement.remove();
+    saveTasks();
 }
